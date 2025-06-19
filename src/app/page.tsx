@@ -2,7 +2,7 @@ import Navbar from "@/components/Navbar";
 import CustomeText from "@/components/ui/CustomeText";
 import DualToggleButtons from "@/components/ui/DualButtons";
 import Image from "next/image";
-import { Award , Star, ShieldCheck  } from "lucide-react";
+import { Award, Star, ShieldCheck } from "lucide-react";
 import OrangeButton from "@/components/ui/OrangeButton";
 
 export default function Home() {
@@ -350,7 +350,7 @@ export default function Home() {
           />
 
           {/* Send Button */}
-          <OrangeButton title="Send"/>
+          <OrangeButton title="Send" />
         </div>
 
         <div className="flex flex-wrap justify-center items-center gap-6">
