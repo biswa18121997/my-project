@@ -253,7 +253,6 @@ export default function Home() {
       </div>
 
       {/* my portfolio */}
-
       <div className="w-full h-[1124px] flex flex-col items-center px-[71px] py-[97px] gap-12">
 
         <div className="w-full h-[150px] flex justify-between items-center">
@@ -365,6 +364,7 @@ export default function Home() {
           })}
         </div>
       </div>
+      
     </div>
   );
 }
