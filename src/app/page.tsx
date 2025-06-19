@@ -2,7 +2,7 @@ import Navbar from "@/components/Navbar";
 import CustomeText from "@/components/ui/CustomeText";
 import DualToggleButtons from "@/components/ui/DualButtons";
 import Image from "next/image";
-import { Star } from "lucide-react";
+import { Award , Star, ShieldCheck  } from "lucide-react";
 import OrangeButton from "@/components/ui/OrangeButton";
 
 export default function Home() {
@@ -33,6 +33,22 @@ export default function Home() {
   const buttons = [
     "Landing Page", "Product Deesign", "Animation", "Glassmorphim", "Cards"
   ]
+
+  const IconAndText = [
+    {
+      icon: Star,
+      name: "4.9 Average Rating",
+    },
+    {
+      icon: Award,
+      name: "25+ Winning Awards",
+    },
+    {
+      icon: ShieldCheck,
+      name: "Certified Product Design",
+    },
+  ];
+
 
   return (
     <div className="relative min-h-screen w-full bg-white py-10 flex flex-col items-center justify-start">
@@ -258,7 +274,7 @@ export default function Home() {
             </div>
           </div>
           <OrangeButton
-            title="See "
+            title="See All"
           />
         </div>
 
@@ -315,21 +331,39 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="w-[832px] h-[120px] flex flex-col items-center justify-center gap-2.5">
-          <div>
+        <div className="w-[832px] h-[86px] flex items-center justify-between px-6 rounded-full border border-[#E4E7EC] bg-white">
+          {/* Icon Container */}
+          <div className="w-[58px] h-[58px] flex items-center justify-center rounded-full bg-[#FFF2E5]">
             <Image
-              src="Frame 325.svg"
-              alt="message"
-              width={64}
-              height={58}
+              src="/sms.svg"
+              alt="message icon"
+              width={28}
+              height={28}
             />
           </div>
-          <input type="text" placeholder="Enter Email Address" 
-            className="font-medium text-[20px] w-full h-[86px] p-[14px] border border-[#E4E7EC] backdrop:blur-lg"
+
+          {/* Input Field */}
+          <input
+            type="text"
+            placeholder="Enter Email Address"
+            className="flex-1 mx-4 outline-none text-[#1D2939] placeholder:text-[#667085] text-[18px] bg-transparent"
           />
-          <button className="bg-[#FD853A] px-10 py-5 rounded-[60px]">Send</button>
+
+          {/* Send Button */}
+          <OrangeButton title="Send"/>
         </div>
 
+        <div className="flex flex-wrap justify-center items-center gap-6">
+          {IconAndText.map((data, index) => {
+            const Icon = data.icon;
+            return (
+              <div key={index} className="flex items-center gap-2 text-base font-medium text-[#000000]">
+                <Icon size={20} />
+                {data.name}
+              </div>
+            );
+          })}
+        </div>
       </div>
     </div>
   );
