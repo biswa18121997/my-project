@@ -15,7 +15,7 @@ const Navbar = () => {
     return (
         <nav className="w-[1298px] h-[86px] bg-[#171717] text-white px-2.5 rounded-[50px] backdrop-blur-[15px] box-border border border-white mx-auto flex items-center justify-between z-50">
             {/* Left menu */}
-            <div className="flex flex-1 justify-start gap-4">
+            <div className="flex flex-1 justify-start gap-2.5">
                 {menuItems.slice(0, 3).map((item) => (
                     <button
                         key={item.label}
