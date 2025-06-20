@@ -4,6 +4,9 @@ import DualToggleButtons from "@/components/ui/DualButtons";
 import Image from "next/image";
 import { Award, Star, ShieldCheck } from "lucide-react";
 import OrangeButton from "@/components/ui/OrangeButton";
+import PortfolioCard from "@/components/ui/PortfolioCard";
+import ArrowButton from "@/components/ui/ArrowButton";
+import PortfolioSlider from "@/components/ui/PortfolioSlider";
 
 export default function Home() {
   const experiences = [
@@ -277,8 +280,9 @@ export default function Home() {
           />
         </div>
 
-        <div>
-          <div></div>
+        <div className="w-[1290px] h-[732px] flex flex-col items-center gap-12">
+          <PortfolioSlider />
+          
           <div className="w-[947px] h-[54px] flex gap-[14px] items-center">
             {buttons.map((text, index) => (
               <button
@@ -290,25 +294,20 @@ export default function Home() {
             ))}
           </div>
 
-        </div>
-        <div className="flex flex-col w-[742px] h-[148px] items-start gap-6">
-          <div className="w-[742px] h-[63px] gap-[18px] flex items-start">
-            <CustomeText
-              title="Lirante - Food Delivery Solution"
-              className="font-bold text-[40px] text-[#344054]"
-            />
-            <div className="bg-[#FD853A] w-[48px] h-[48px] flex items-center justify-center p-3 rounded-[60px]">
-              <Image
-                src="/down right.svg"
-                alt="arrow"
-                width={34}
-                height={34}
-                className="cursor-pointer"
+          <div className="flex flex-col w-[742px] h-[148px] items-start gap-6">
+            <div className="w-[742px] h-[63px] gap-[18px] flex items-start">
+              <CustomeText
+                title="Lirante - Food Delivery Solution"
+                className="font-bold text-[40px] text-[#344054]"
               />
+              <div className="w-[58px] h-[58px] rounded-full bg-[#FD853A] flex items-center justify-center transition-all duration-300">
+                <ArrowButton className="transition-all duration-300 stroke-white -rotate-45" />
+              </div>
             </div>
+            <p className="w-full h-[61px] text-[20px] text-[#344054] text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed congue interdum ligula a dignissim. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lobortis orci elementum egestas lobortis.</p>
           </div>
-          <p className="w-full h-[61px] text-[20px] text-[#344054] text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed congue interdum ligula a dignissim. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lobortis orci elementum egestas lobortis.</p>
         </div>
+
       </div>
 
       {/* contact */}
@@ -332,7 +331,7 @@ export default function Home() {
 
         <div className="w-[832px] h-[86px] flex items-center justify-between px-6 rounded-full border border-[#E4E7EC] bg-white">
           {/* Icon Container */}
-          <div className="w-[58px] h-[58px] flex items-center justify-center rounded-full bg-[#FFF2E5]">
+          <div className="w-[64px] h-[58px] flex items-center justify-center rounded-[50px] bg-[#FFEAD5]">
             <Image
               src="/sms.svg"
               alt="message icon"
@@ -364,7 +363,7 @@ export default function Home() {
           })}
         </div>
       </div>
-      
+
     </div>
   );
 }
