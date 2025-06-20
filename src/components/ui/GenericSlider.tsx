@@ -8,14 +8,41 @@ import PortfolioCard from './PortfolioCard';
 import ReviewCard from './ReviewCard';
 import React from 'react';
 
-interface GenericSliderProps<T> {
+interface HoverCard {
+  title: string;
+  imageSrc: string;
+}
+
+interface PortfolioCard {
+  image: string;
+  title: string;
+  href: string;
+  desc: string;
+}
+
+interface ReviewCard {
+  name: string;
+  role: string;
+  rating: number;
+  text: string;
+}
+
+type AllowedCard = HoverCard | PortfolioCard | ReviewCard;
+
+
+interface GenericSliderProps<T extends AllowedCard> {
   data: T[];
   slidesPerView: number;
   heightClass?: string;
   cardType: 'hover' | 'portfolio' | 'review';
 }
 
-export function GenericSlider<T>({ data, slidesPerView, heightClass, cardType }: GenericSliderProps<T>) {
+export function GenericSlider<T extends AllowedCard>({
+  data,
+  slidesPerView,
+  heightClass,
+  cardType,
+}: GenericSliderProps<T>) {
   const isReview = cardType === 'review';
 
   return (
@@ -34,15 +61,12 @@ export function GenericSlider<T>({ data, slidesPerView, heightClass, cardType }:
           pagination={{ clickable: true }}
           className="!pb-10"
         >
-          {data.map((item: any, index) => (
-            <SwiperSlide
-              key={index}
-              className={isReview ? '!w-[784px]' : ''} 
-            >
-              {cardType === 'hover' && (
+          {data.map((item, index) => (
+            <SwiperSlide key={index} className={isReview ? '!w-[784px]' : ''}>
+              {cardType === 'hover' && 'title' in item && 'imageSrc' in item && (
                 <ServicesCard title={item.title} imageSrc={item.imageSrc} />
               )}
-              {cardType === 'portfolio' && (
+              {cardType === 'portfolio' && 'image' in item && (
                 <PortfolioCard
                   image={item.image}
                   title={item.title}
@@ -50,7 +74,7 @@ export function GenericSlider<T>({ data, slidesPerView, heightClass, cardType }:
                   desc={item.desc}
                 />
               )}
-              {cardType === 'review' && (
+              {cardType === 'review' && 'rating' in item && (
                 <ReviewCard
                   name={item.name}
                   role={item.role}

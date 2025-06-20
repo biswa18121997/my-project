@@ -22,7 +22,7 @@ export default function Home() {
         <div className="flex flex-col w-[328px] h-[138px] items-start justify-start transition-transform duration-300 ease-in-out group-hover:-translate-y-[250px]">
           <div className="text-[#344054] text-[36px] leading-none">“</div>
           <p className="text-[#344054] text-[16px] font-medium leading-snug">
-            Jenny's exceptional product design ensured our website's success.
+            Jenny&apos;s exceptional product design ensured our website's success.
             <br />
             Highly recommended.
           </p>
@@ -37,7 +37,7 @@ export default function Home() {
               Hello!
             </button>
             <div className="flex gap-2 items-end mb-1">
-              <CustomeText title="I'm" className="text-[#171717] font-semibold text-[96px]" />
+              <CustomeText title="I&apos;m" className="text-[#171717] font-semibold text-[96px]" />
               <div className="flex">
                 <CustomeText title="Jenny" className="text-[#FD853A] font-semibold text-[96px]" />
                 <CustomeText title="," className="text-[#171717] font-semibold text-[96px]" />
