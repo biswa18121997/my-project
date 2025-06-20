@@ -12,7 +12,7 @@ interface PortfolioCardProps {
 const PortfolioCard: React.FC<PortfolioCardProps> = ({ image, title, href, desc }) => {
   return (
     <div
-      className="relative group w-[633px] h-[371px] rounded-[20px] overflow-hidden transition-all duration-300"
+      className="relative group w-[633px] h-[371px] rounded-[20px] overflow-hidden transition-all duration-300 cursor-pointer"
       style={{ boxShadow: '0px 4px 4px rgba(0, 0, 0, 0.25)' }}
     >
       <div
