@@ -17,7 +17,7 @@ export default function Home() {
       <Navbar />
 
       {/* Hero Section */}
-      <div className="group flex max-w-[1440px] w-full h-[846px] px-4 gap-[71px] items-center justify-center mt-6">
+      <div className="group flex w-full h-[846px] px-4 gap-[71px] items-center justify-center mt-6">
 
         {/* Left Testimonial */}
         <div className="flex flex-col w-[328px] h-[138px] items-start justify-start transition-transform duration-300 ease-in-out group-hover:-translate-y-[250px]">
@@ -97,15 +97,48 @@ export default function Home() {
         </div>
       </div>
 
-      {/*  */}
-      <div className="relative flex flex-col w-full  h-[863px] gap-[96px] items-center px-[71px] py-[116px] bg-[#171717] rounded-[50px] overflow-hidden ">
+      {/* Services */}
+      {/* Services */}
+      <div className="relative flex flex-col w-full h-[878px] gap-[96px] items-center px-[71px] py-[116px] bg-[#171717] rounded-[50px] overflow-hidden -mt-14">
         <Image
           src="/Frame 77.svg"
           alt="image"
           fill
-          className="object-cover absolute opacity-20"
+          className="object-cover absolute opacity-50"
         />
+
+        <div className="w-full h-[52px] flex items-start justify-between relative z-10">
+          <div className="flex gap-2.5">
+            <CustomeText title="My" className="font-medium text-5xl text-[#FCFCFD]" />
+            <CustomeText title="Services" className="font-medium text-5xl text-[#FD853A]" />
+          </div>
+          <p className="h-full w-[578px] font-medium text-[20px] text-white">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis lacus nunc,
+            posuere in justo vulputate, bibendum sodales
+          </p>
+        </div>
+
+        <div className="relative flex w-[1299px] h-[508px] items-start gap-[45px]">
+          <div className="relative w-[416px] h-[508px] flex flex-col items-center justify-end rounded-[40px] bg-[#3C3C3C] bg-opacity-50 border-1 border-white/50 backdrop-blur-[15px] overflow-hidden">
+            {/* Back Layers */}
+            <div className="absolute inset-x-0 flex justify-center">
+              <div className="w-[328px] h-[329px] rounded-[35px] bg-[#757575] opacity-50 absolute bottom-6"></div>
+              <div className="w-[374px] h-[329px] rounded-[35px] bg-[#9E9D9D] absolute bottom-1"></div>
+            </div>
+
+            {/* Main Image */}
+            <Image
+              src="Rectangle 7.svg"
+              alt="Image"
+              width={416}
+              height={307}
+              className="object-cover z-20"
+            />
+          </div>
+        </div>
+
       </div>
+
 
       {/* Work Experience Section */}
       <div className="w-full h-[827px] flex flex-col items-start mx-auto px-[71px]">
@@ -307,7 +340,7 @@ export default function Home() {
           </div>
           <p className="w-[742px] h-[61px] text-[20px] text-[#F9FAFB] text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed congue interdum ligula a dignissim. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lobortis orci elementum egestas lobortis.</p>
         </div>
-        <ReviewSlider/>
+        <ReviewSlider />
       </div>
 
       {/* contact */}
