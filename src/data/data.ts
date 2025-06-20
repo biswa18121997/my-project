@@ -128,3 +128,12 @@ export const reviews = [
         text: 'Innovative approach, clean design, and prompt delivery. Will work together again for sure!',
     },
 ];
+
+export const cardData = [
+  { title: 'Web Developer', imageSrc: '/Rectangle 7.svg' },
+  { title: 'UI Designer', imageSrc: '/Rectangle 7.svg' },
+  { title: 'Backend Engineer', imageSrc: '/Rectangle 7.svg' },
+  { title: 'DevOps Expert', imageSrc: '/Rectangle 7.svg' },
+  { title: 'AI Researcher', imageSrc: '/Rectangle 7.svg' },
+  { title: 'Product Manager', imageSrc: '/Rectangle 7.svg' },
+];

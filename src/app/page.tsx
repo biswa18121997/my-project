@@ -2,13 +2,12 @@ import Navbar from "@/components/Navbar";
 import CustomeText from "@/components/ui/CustomeText";
 import DualToggleButtons from "@/components/ui/DualButtons";
 import Image from "next/image";
-import { Award, Star, ShieldCheck } from "lucide-react";
+import { Star } from "lucide-react";
 import OrangeButton from "@/components/ui/OrangeButton";
 import ArrowButton from "@/components/ui/ArrowButton";
-import PortfolioSlider from "@/components/ui/PortfolioSlider";
 import Blog from "@/components/ui/Blog";
-import { experiences, buttons, iconAndText, skills, blogs } from '../data/data';
-import ReviewSlider from "@/components/ui/ReviewSlider";
+import { experiences, buttons, iconAndText, skills, blogs, portfolioData, cardData, reviews } from '../data/data';
+import { GenericSlider } from "@/components/ui/GenericSlider";
 
 export default function Home() {
 
@@ -98,7 +97,6 @@ export default function Home() {
       </div>
 
       {/* Services */}
-      {/* Services */}
       <div className="relative flex flex-col w-full h-[878px] gap-[96px] items-center px-[71px] py-[116px] bg-[#171717] rounded-[50px] overflow-hidden -mt-14">
         <Image
           src="/Frame 77.svg"
@@ -118,33 +116,21 @@ export default function Home() {
           </p>
         </div>
 
-        <div className="relative flex w-[1299px] h-[508px] items-start gap-[45px]">
-          <div className="relative w-[416px] h-[508px] flex flex-col items-center justify-end rounded-[40px] bg-[#3C3C3C] bg-opacity-50 border-1 border-white/50 backdrop-blur-[15px] overflow-hidden">
-            {/* Back Layers */}
-            <div className="absolute inset-x-0 flex justify-center">
-              <div className="w-[328px] h-[329px] rounded-[35px] bg-[#757575] opacity-50 absolute bottom-6"></div>
-              <div className="w-[374px] h-[329px] rounded-[35px] bg-[#9E9D9D] absolute bottom-1"></div>
-            </div>
-
-            {/* Main Image */}
-            <Image
-              src="Rectangle 7.svg"
-              alt="Image"
-              width={416}
-              height={307}
-              className="object-cover z-20"
-            />
-          </div>
+        <div className="relative flex w-[1299px] h-[508px] items-start justify-center">
+          <GenericSlider
+            data={cardData}
+            slidesPerView={3}
+            heightClass="h-[550px]"
+            cardType="hover"
+          />
         </div>
-
       </div>
-
 
       {/* Work Experience Section */}
       <div className="w-full h-[827px] flex flex-col items-start mx-auto px-[71px]">
 
         {/* Section Title */}
-        <div className="w-full h-[234px] flex items-start justify-center space-x-2.5">
+        <div className="w-full h-[234px] flex items-start justify-center space-x-2.5 mt-5">
           <CustomeText title="My" className="font-medium text-6xl text-[#344054]" />
           <CustomeText title="Work" className="font-medium text-6xl text-[#FD853A]" />
           <CustomeText title="Experince" className="font-medium text-6xl text-[#FD853A]" />
@@ -283,7 +269,13 @@ export default function Home() {
         </div>
 
         <div className="w-[1290px] h-[732px] flex flex-col items-center gap-12">
-          <PortfolioSlider />
+          <GenericSlider
+            data={portfolioData}
+            slidesPerView={2}
+            heightClass="h-[460px]"
+            cardType="portfolio"
+          />
+
 
           <div className="w-[947px] h-[54px] flex gap-[14px] items-center">
             {buttons.map((text, index) => (
@@ -340,12 +332,17 @@ export default function Home() {
           </div>
           <p className="w-[742px] h-[61px] text-[20px] text-[#F9FAFB] text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed congue interdum ligula a dignissim. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lobortis orci elementum egestas lobortis.</p>
         </div>
-        <ReviewSlider />
+        <GenericSlider
+          data={reviews}
+          slidesPerView={3}
+          heightClass=""
+          cardType="review"
+        />
       </div>
 
       {/* contact */}
       <div className="w-full h-[476px] gap-2.5 flex flex-col py-[98px] items-center justify-center">
-        <div className="w-[799px] h-[150px] flex  flex-col items-start">
+        <div className="w-[799px] h-[150px] flex flex-col items-start">
           <CustomeText
             title="Have an Awsome Project"
             className="font-semibold text-[64px] text-[#344054]"
