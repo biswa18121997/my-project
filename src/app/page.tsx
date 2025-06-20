@@ -8,9 +8,10 @@ import ArrowButton from "@/components/ui/ArrowButton";
 import PortfolioSlider from "@/components/ui/PortfolioSlider";
 import Blog from "@/components/ui/Blog";
 import { experiences, buttons, iconAndText, skills, blogs } from '../data/data';
+import ReviewSlider from "@/components/ui/ReviewSlider";
 
 export default function Home() {
-  
+
   return (
     <div className="relative min-h-screen w-full bg-white py-10 flex flex-col items-center justify-start">
       <Navbar />
@@ -268,6 +269,75 @@ export default function Home() {
 
       </div>
 
+      {/* Testimonials */}
+      <div className="relative flex flex-col w-full  h-[863px] gap-[96px] items-center px-[71px] py-[116px] bg-[#171717] rounded-[50px] overflow-hidden ">
+        <Image
+          src="/Frame 77.svg"
+          alt="image"
+          fill
+          className="object-cover absolute opacity-20"
+        />
+
+        <div className="flex flex-col h-[201px] w-[1299px] items-center gap-3.5">
+          <div className="w-[448px] h-[126px] flex flex-col">
+            <CustomeText
+              title="Testimonials That"
+              className="font-medium text-[48px] text-[#FCFCFD]"
+            />
+            <div className="flex gap-2.5">
+              <CustomeText
+                title="Speak to"
+                className="font-medium text-[48px] text-[#FCFCFD]"
+              />
+              <CustomeText
+                title="My Result"
+                className="font-medium text-[48px] text-[#FD853A]"
+              />
+            </div>
+          </div>
+          <p className="w-[742px] h-[61px] text-[20px] text-[#F9FAFB] text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed congue interdum ligula a dignissim. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lobortis orci elementum egestas lobortis.</p>
+        </div>
+        <ReviewSlider/>
+
+        {/* <div className="flex flex-col w-[784px] h-[265px] items-start gap-3.5 p-[21px] rounded-3xl bg-[#FFFFFF]/14 backdrop-blur-[14px] opacity-80">
+          <div className="w-fit h-[56px] flex gap-4 items-center justify-center">
+            <div className="w-14 h-14 flex items-center justify-center">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="#FCFCFD"
+                className="w-14 h-14"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M12 12c2.485 0 4.5-2.015 4.5-4.5S14.485 3 12 3s-4.5 2.015-4.5 4.5S9.515 12 12 12zM4.5 21c0-3.314 3.357-6 7.5-6s7.5 2.686 7.5 6"
+                />
+              </svg>
+            </div>
+
+            <div className="flex flex-col w-fit h-full">
+              <h3 className="font-bold text-[24px] text-[#FCFCFD]">Mahesh Pokale</h3>
+              <span className="text-[18px] text-[#FCFCFD]">Web Designer</span>
+            </div>
+          </div>
+
+          <div className="flex items-center justify-center w-[202px] h-8 gap-[5px]">
+            <div className="flex gap-1">
+              {[...Array(5)].map((_, i) => (
+                <Star key={i} size={32} fill="#FD853A" stroke="#FD853A" />
+              ))}
+            </div>
+            <span className="text-[32px] text-[#FCFCFD]">5</span>
+          </div>
+
+          <p className="w-[742px] h-[106px] text-[20px] items-center justify-center text-[#F9FAFB]">consectetur adipiscing elit. Sed congue interdum ligula a dignissim. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lobortis orci elementum egestas lobortis.Sed lobortis orci elementum egestas lobortis.Sed lobortis orci elementum egestas lobortis.</p>
+        </div> */}
+
+      </div>
+
       {/* contact */}
       <div className="w-full h-[476px] gap-2.5 flex flex-col py-[98px] items-center justify-center">
         <div className="w-[799px] h-[150px] flex  flex-col items-start">
@@ -350,6 +420,7 @@ export default function Home() {
         </div>
       </div>
 
+      {/* blog */}
       <div className="flex flex-col w-fll h-[1067px] items-center gap-12 px-[71px] py-[97px]">
         <div className="w-[1298px] h-[126px] flex items-center justify-between">
           <h1 className="text-[#344054] w-[215px] h-full font-bold text-[48px]">From my blog post</h1>

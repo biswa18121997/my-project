@@ -4,23 +4,8 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination, Autoplay } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
-
 import PortfolioCard from './PortfolioCard';
-
-const portfolioData = [
-  { image: "/Frame 26.svg", title: "Lirante 1", href: "/project-1",
-    desc:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed congue interdum ligula a dignissim. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lobortis orci elementum egestas lobortis."
-  },
-  { image: "/Frame 26.svg", title: "Lirante 2", href: "/project-2",
-    desc:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed congue interdum ligula a dignissim. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lobortis orci elementum egestas lobortis."
-   },
-  { image: "/Frame 26.svg", title: "Lirante 3", href: "/project-3",
-    desc:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed congue interdum ligula a dignissim. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lobortis orci elementum egestas lobortis."
-   },
-  { image: "/Frame 26.svg", title: "Lirante 4", href: "/project-4" ,
-    desc:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed congue interdum ligula a dignissim. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lobortis orci elementum egestas lobortis."
-  },
-];
+import { portfolioData } from '../../data/data';
 
 const PortfolioSlider = () => {
   return (
@@ -52,33 +37,6 @@ const PortfolioSlider = () => {
           ))}
         </Swiper>
       </div>
-
-      <style jsx global>{`
-        .swiper-pagination-bullets {
-          bottom: 0px !important;
-          display: flex;
-          justify-content: center;
-          gap: 8px;
-        }
-
-        .swiper-pagination-bullet {
-          width: 15px;
-          height: 15px;
-          background: #d1d5db;
-          opacity: 1;
-          border-radius: 50%;
-          transition: all 0.3s ease-in-out;
-        }
-
-        .swiper-pagination-bullet-active {
-          background: #fd853a;
-          width: 60px;
-          height: 15px; /* Fixed typo: hight -> height */
-          border-radius: 21px;
-          transition: all 0.3s ease-in-out;
-        }
-      `}</style>
-
     </div>
   );
 };
