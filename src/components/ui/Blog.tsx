@@ -1,16 +1,9 @@
 import Image from 'next/image';
 import React from 'react';
 import ArrowButton from './ArrowButton';
+import { Blog as BlogType } from '../../data/data'; 
 
-interface BlogProps {
-  image: string;
-  button: string;
-  name: string;
-  date: string;
-  title: string;
-}
-
-const Blog: React.FC<BlogProps> = ({ image, button, name, date, title }) => {
+const Blog: React.FC<BlogType> = ({ image, button, name, date, title }) => {
   return (
     <div className="flex flex-col w-[416px] h-[699px] items-start gap-[35px]">
       <div className="relative w-full h-[432px] gap-[10px] items-start group">

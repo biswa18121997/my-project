@@ -27,7 +27,7 @@ const Footer = () => {
             {/* Top Section */}
             <div className="w-full flex flex-col md:flex-row items-center justify-between gap-6">
                 <h1 className="font-semibold leading-tight text-[48px] md:text-[64px] text-[#FCFCFD] text-center md:text-left">
-                    Let’s Connect There
+                    Let&apos;s Connect There
                 </h1>
                 <button className="group flex items-center justify-center gap-2 w-[202px] h-[62px] px-5 py-2.5 text-white text-lg font-semibold rounded-full bg-[#FD853A] cursor-pointer">
                     Hire Me

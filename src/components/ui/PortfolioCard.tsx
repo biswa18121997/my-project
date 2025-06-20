@@ -1,15 +1,10 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import ArrowButton from './ArrowButton';
+import { PortfolioItem } from '@/data/data';
 
-interface PortfolioCardProps {
-  image: string;
-  title: string;
-  href: string;
-  desc: string;
-}
 
-const PortfolioCard: React.FC<PortfolioCardProps> = ({ image, title, href, desc }) => {
+const PortfolioCard: React.FC<PortfolioItem> = ({ image, title, href, desc }) => {
   return (
     <div
       className="relative group w-[633px] h-[371px] rounded-[20px] overflow-hidden transition-all duration-300 cursor-pointer"

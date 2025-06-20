@@ -1,14 +1,8 @@
 'use client';
 import { Star } from 'lucide-react';
+import { Review } from '@/data/data';
 
-interface ReviewCardProps {
-  name: string;
-  role: string;
-  rating: number;
-  text: string;
-}
-
-export default function ReviewCard({ name, role, rating, text }: ReviewCardProps) {
+export default function ReviewCard({ name, role, rating, text }: Review) {
   return (
     <div className="flex flex-col w-[784px] h-[265px] items-start gap-3.5 p-[21px] rounded-3xl bg-[#FFFFFF]/14 backdrop-blur-[14px] opacity-80">
       <div className="w-fit h-[56px] flex gap-4 items-center justify-center">
