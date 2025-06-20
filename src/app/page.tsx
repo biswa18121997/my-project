@@ -22,7 +22,7 @@ export default function Home() {
         <div className="flex flex-col w-[328px] h-[138px] items-start justify-start transition-transform duration-300 ease-in-out group-hover:-translate-y-[250px]">
           <div className="text-[#344054] text-[36px] leading-none">“</div>
           <p className="text-[#344054] text-[16px] font-medium leading-snug">
-            Jenny&apos;s exceptional product design ensured our website's success.
+            Jenny&apos;s exceptional product design ensured our website&apos;s success.
             <br />
             Highly recommended.
           </p>
@@ -353,7 +353,7 @@ export default function Home() {
               className="font-semibold text-[64px] text-[#344054]"
             />
             <CustomeText
-              title="Let's Discuss"
+              title="Let&apos;s Discuss"
               className="font-semibold text-[64px] text-[#FD853A]"
             />
           </div>
