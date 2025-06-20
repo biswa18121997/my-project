@@ -1,5 +1,4 @@
 import React from "react";
-import OrangeButton from "./ui/OrangeButton";
 import { FacebookIcon, YoutubeIcon, InstagramIcon, TwitterIcon, MessageCircle } from "lucide-react";
 import { ArrowUpRight } from "lucide-react";
 import CustomeText from "./ui/CustomeText";
