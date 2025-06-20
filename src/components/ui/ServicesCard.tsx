@@ -7,7 +7,7 @@ interface HoverCardProps {
 
 export default function ServicesCard({ title, imageSrc }: HoverCardProps) {
   return (
-    <div className="relative flex w-[416px] h-[508px] flex-col items-center justify-end rounded-[40px] bg-[#686868]/20 border border-white/50 backdrop-blur-[15px] hover:bg-[#FD853A] transition-colors duration-300 ease-in-out overflow-hidden cursor-pointer group">
+    <div className="relative flex w-[416px] h-[508px] flex-col items-center justify-end rounded-[40px] bg-white/10 backdrop-blur-[15px] border border-white/50 hover:bg-[#FD853A] transition-colors duration-300 ease-in-out overflow-hidden cursor-pointer group">
       <h1 className="absolute top-4 w-full h-[65px] flex items-start font-medium text-[32px] text-white z-30 border-b-2 border-[#F9FAFB]/30">
         <span className="relative top-2 left-6">{title}</span>
       </h1>
