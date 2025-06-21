@@ -16,7 +16,7 @@ export default function Home() {
       {/* Hero Section */}
       <div className="group flex w-full h-[846px] px-4 gap-[71px] items-center justify-center mt-6">
         <div className="flex flex-col w-[328px] h-[138px] items-start justify-start transition-transform duration-300 ease-in-out group-hover:-translate-y-[250px]">
-          <div className="text-[#344054] text-[36px] leading-none">"</div>
+          <div className="text-[#344054] text-[36px] leading-none">&quot;</div>
           <p className="text-[#344054] text-[16px] font-medium leading-snug">
             Jenny&apos;s exceptional product design ensured our website&apos;s success.
             <br />
