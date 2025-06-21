@@ -419,9 +419,9 @@ export default function Home() {
 
       {/* Blog */}
       <div className="flex flex-col w-fll h-fit items-center gap-12 px-[71px] py-[97px]">
-        <div className="w-[1298px] h-[126px] flex flex-col md:flex-row items-center justify-between gap-6 mb-6 md:mb-0">
-          <h1 className="text-[#344054] w-fit md:min-w-[215px] h-full font-bold text-[48px]">From my blog post</h1>
-          <OrangeButton title="See All" className="w-[400px] md:w-fit" />
+        <div className="w-[1298px] h-[126px] flex flex-col lg:flex-row items-center justify-between gap-6 mb-6 md:mb-0">
+          <h1 className="text-[#344054] w-fit md:min-w-[215px] h-full font-bold text-4xl md:text-5xl">From my blog post</h1>
+          <OrangeButton title="See All" className="w-[300px] md:w-fit" />
         </div>
         <GenericSlider
           data={blogs}
