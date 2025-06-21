@@ -40,6 +40,8 @@ export interface CardData {
   imageSrc: string;
 }
 
+
+
 export const experiences: Experience[] = [
   {
     company: "Cognizant, Mumbai",
