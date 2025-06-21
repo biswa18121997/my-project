@@ -4,15 +4,17 @@ import { Review } from '@/data/data';
 
 export default function ReviewCard({ name, role, rating, text }: Review) {
   return (
-    <div className="flex flex-col w-[784px] h-[265px] items-start gap-3.5 p-[21px] rounded-3xl bg-[#FFFFFF]/14 backdrop-blur-[14px] opacity-80">
-      <div className="w-fit h-[56px] flex gap-4 items-center justify-center">
-        <div className="w-14 h-14 flex items-center justify-center">
+    <div className="w-full  sm:max-w-xl md:max-w-2xl lg:max-w-[784px] bg-white/10 backdrop-blur-[14px] rounded-3xl p-4 sm:p-6 flex flex-col gap-4 text-white items-center justify-center">
+      
+      {/* Profile Section */}
+      <div className="flex items-center gap-4">
+        <div className="w-12 h-12 sm:w-14 sm:h-14 flex items-center justify-center bg-white/10 rounded-full">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
             viewBox="0 0 24 24"
             stroke="#FCFCFD"
-            className="w-14 h-14"
+            className="w-8 h-8 sm:w-full sm:h-full"
           >
             <path
               strokeLinecap="round"
@@ -22,20 +24,26 @@ export default function ReviewCard({ name, role, rating, text }: Review) {
             />
           </svg>
         </div>
-        <div className="flex flex-col w-fit h-full">
-          <h3 className="font-bold text-[24px] text-[#FCFCFD]">{name}</h3>
-          <span className="text-[18px] text-[#FCFCFD]">{role}</span>
+        <div>
+          <h3 className="text-base sm:text-lg font-semibold">{name}</h3>
+          <p className="text-xs sm:text-sm text-white/80">{role}</p>
         </div>
       </div>
-      <div className="flex items-center justify-center w-[202px] h-8 gap-[5px]">
+
+      {/* Rating */}
+      <div className="flex items-center gap-2">
         <div className="flex gap-1">
           {[...Array(rating)].map((_, i) => (
-            <Star key={i} size={32} fill="#FD853A" stroke="#FD853A" />
+            <Star key={i} size={18} className="text-[#FD853A]" fill="#FD853A" stroke="#FD853A" />
           ))}
         </div>
-        <span className="text-[32px] text-[#FCFCFD]">{rating}</span>
+        <span className="text-sm sm:text-base">{rating}</span>
       </div>
-      <p className="w-[742px] h-[106px] text-[20px] text-[#F9FAFB]">{text}</p>
+
+      {/* Review Text */}
+      <p className="text-sm sm:text-base text-[#F9FAFB] leading-relaxed">
+        {text}
+      </p>
     </div>
   );
 }

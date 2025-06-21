@@ -10,7 +10,12 @@ import PortfolioCard from './PortfolioCard';
 import ReviewCard from './ReviewCard';
 import Blog from './Blog';
 
-import { CardData, PortfolioItem, Review, Blog as BlogItem } from '@/data/data';
+import {
+  CardData,
+  PortfolioItem,
+  Review,
+  Blog as BlogItem,
+} from '@/data/data';
 
 type AllowedCard = CardData | PortfolioItem | Review | BlogItem;
 
@@ -28,10 +33,12 @@ export function GenericSlider<T extends AllowedCard>({
   cardType,
 }: GenericSliderProps<T>) {
   const isReview = cardType === 'review';
+  const isPortfolio = cardType === 'portfolio';
+  const isBlog = cardType === 'blog';
 
   return (
-    <div className={`relative flex flex-col justify-center items-center w-full ${heightClass || ''}`}>
-      <div className={`${isReview ? 'w-full' : 'w-full max-w-[1440px] -mx-5'}`}>
+    <div className={`relative w-full flex flex-col justify-center items-center ${heightClass || ''}`}>
+      <div className={`w-full px-4 sm:px-6 lg:px-0 ${!isReview ? 'max-w-[1440px]' : ''}`}>
         <Swiper
           modules={[Pagination, Autoplay]}
           spaceBetween={20}
@@ -44,19 +51,22 @@ export function GenericSlider<T extends AllowedCard>({
           pagination={{ clickable: true }}
           breakpoints={{
             0: {
-              slidesPerView: 1,
+              slidesPerView: isPortfolio ? 1 : 1,
             },
-            800: {
-              slidesPerView: 2,
+            850: {
+              slidesPerView: isPortfolio || isBlog || isReview ? 1 : 2,
             },
-            1280: {
-              slidesPerView: slidesPerView,
+            1024: {
+              slidesPerView: isPortfolio ? 2 : slidesPerView,
             },
           }}
           className="!pb-10"
         >
           {data.map((item, index) => (
-            <SwiperSlide key={index} className={isReview ? '!w-[90%] md:!w-[784px]' : ''}>
+            <SwiperSlide
+              key={index}
+              className={`${isReview ? '!w-[90%] md:!w-[784px]' : '!flex justify-center'}`}
+            >
               {cardType === 'hover' && 'title' in item && 'imageSrc' in item && (
                 <ServicesCard title={item.title} imageSrc={item.imageSrc} />
               )}
