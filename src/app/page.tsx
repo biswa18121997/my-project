@@ -14,7 +14,7 @@ export default function Home() {
       <Navbar />
 
       {/* Hero Section */}
-      <div className="group flex flex-col md:flex-row w-full min-h-[600px] sm:min-h-[700px] md:h-[846px] px-4 sm:px-6 md:px-8 gap-6 sm:gap-8 md:gap-[71px] items-center justify-center mt-6">
+      <div className="group flex flex-col md:flex-row w-full min-h-[600px] sm:min-h-[700px] lg:h-[700] lg:-mb-2 xl:mb-0 xl:h-[846px] px-4 sm:px-6 md:px-8 gap-6 sm:gap-8 md:gap-[71px] items-center justify-center mt-6">
         <div className="hidden lg:flex flex-col w-[328px] h-[138px] items-start justify-start transition-transform duration-300 ease-in-out group-hover:-translate-y-[250px]">
           <div className="text-[#344054] text-[36px] leading-none">&quot;</div>
           <p className="text-[#344054] text-[16px] font-medium leading-snug">
@@ -30,13 +30,13 @@ export default function Home() {
               Hello!
             </button>
             <div className="flex flex-col sm:flex-row sm:gap-2 items-center sm:items-end mb-1 mt-6 sm:mt-8">
-              <CustomeText title="I&apos;m" className="text-[#171717] font-semibold text-4xl sm:text-7xl  lg:text-[96px]" />
+              <CustomeText title="I&apos;m" className="text-[#171717] font-semibold text-4xl sm:text-5xl md:text-7xl xl:text-[96px]" />
               <div className="flex items-end">
-                <CustomeText title="Jenny" className="text-[#FD853A] font-semibold text-4xl sm:text-7xl lg:text-[96px]" />
-                <CustomeText title="," className="text-[#171717] font-semibold text-4xl sm:text-7xl lg:text-[96px]" />
+                <CustomeText title="Jenny" className="text-[#FD853A] font-semibold text-4xl sm:text-5xl md:text-7xl xl:text-[96px]" />
+                <CustomeText title="," className="text-[#171717] font-semibold text-4xl sm:text-5xl md:text-7xl xl:text-[96px]" />
               </div>
             </div>
-            <CustomeText title="Product Designer" className="text-[#171717] font-semibold text-4xl sm:text-7xl lg:text-[96px] text-center" />
+            <CustomeText title="Product Designer" className="text-[#171717] font-semibold text-4xl sm:text-5xl md:text-7xl xl:text-[96px] text-center" />
           </div>
 
           <div className="relative w-full max-w-[952px] aspect-[3/2] flex flex-col items-center justify-center -translate-y-[10%] sm:-translate-y-[15%] md:-translate-y-[20%] mx-auto px-4">
@@ -64,7 +64,7 @@ export default function Home() {
               priority
             />
 
-            <div className="absolute bottom-[10%] z-30 w-full flex justify-center">
+            <div className="absolute bottom-[10%] z-30 w-full hidden md:flex justify-center">
               <DualToggleButtons />
             </div>
           </div>
