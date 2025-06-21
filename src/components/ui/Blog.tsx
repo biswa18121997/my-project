@@ -5,7 +5,7 @@ import { Blog as BlogType } from '../../data/data';
 
 const Blog: React.FC<BlogType> = ({ image, button, name, date, title }) => {
   return (
-    <div className="flex flex-col w-[416px] h-[699px] items-start gap-[35px]">
+    <div className="flex flex-col w-[400px] h-[699px] items-start gap-[35px]">
       <div className="relative w-full h-[432px] gap-[10px] items-start group">
         <Image
           src={image}
