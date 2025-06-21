@@ -14,8 +14,8 @@ export default function Home() {
       <Navbar />
 
       {/* Hero Section */}
-      <div className="group flex w-full h-[846px] px-4 gap-[71px] items-center justify-center mt-6">
-        <div className="flex flex-col w-[328px] h-[138px] items-start justify-start transition-transform duration-300 ease-in-out group-hover:-translate-y-[250px]">
+      <div className="group flex flex-col md:flex-row w-full min-h-[600px] sm:min-h-[700px] md:h-[846px] px-4 sm:px-6 md:px-8 gap-6 sm:gap-8 md:gap-[71px] items-center justify-center mt-6">
+        <div className="hidden lg:flex flex-col w-[328px] h-[138px] items-start justify-start transition-transform duration-300 ease-in-out group-hover:-translate-y-[250px]">
           <div className="text-[#344054] text-[36px] leading-none">&quot;</div>
           <p className="text-[#344054] text-[16px] font-medium leading-snug">
             Jenny&apos;s exceptional product design ensured our website&apos;s success.
@@ -24,23 +24,23 @@ export default function Home() {
           </p>
         </div>
 
-        <div className="relative w-full flex flex-col items-center mt-16">
-          <div className="flex w-[952px] h-[266px] flex-col items-center justify-center mb-6 transition-all duration-300 ease-in-out group-hover:translate-y-[280px] group-hover:opacity-0">
-            <button className="h-[45px] px-[26px] py-[13px] rounded-full border border-[#171717] flex items-center justify-center bg-white z-50">
+        <div className="relative w-full flex flex-col items-center justify-center">
+          <div className="flex w-full max-w-[952px] flex-col items-center justify-center  transition-all duration-300 ease-in-out group-hover:translate-y-[280px] group-hover:opacity-0 px-4 sm:px-6">
+            <button className="h-[45px] px-[26px] py-[13px] translate-y-0 md:translate-y-10 rounded-full border border-[#171717] flex items-center justify-center bg-white mt-10">
               Hello!
             </button>
-            <div className="flex gap-2 items-end mb-1">
-              <CustomeText title="I&apos;m" className="text-[#171717] font-semibold text-[96px]" />
-              <div className="flex">
-                <CustomeText title="Jenny" className="text-[#FD853A] font-semibold text-[96px]" />
-                <CustomeText title="," className="text-[#171717] font-semibold text-[96px]" />
+            <div className="flex flex-col sm:flex-row sm:gap-2 items-center sm:items-end mb-1 mt-6 sm:mt-8">
+              <CustomeText title="I&apos;m" className="text-[#171717] font-semibold text-4xl sm:text-7xl  lg:text-[96px]" />
+              <div className="flex items-end">
+                <CustomeText title="Jenny" className="text-[#FD853A] font-semibold text-4xl sm:text-7xl lg:text-[96px]" />
+                <CustomeText title="," className="text-[#171717] font-semibold text-4xl sm:text-7xl lg:text-[96px]" />
               </div>
             </div>
-            <CustomeText title="Product Designer" className="text-[#171717] font-semibold text-[96px]" />
+            <CustomeText title="Product Designer" className="text-[#171717] font-semibold text-4xl sm:text-7xl lg:text-[96px] text-center" />
           </div>
 
-          <div className="relative w-[952px] h-[636px] flex flex-col items-center justify-center -translate-y-[20%]">
-            <div className="absolute bottom-0 z-0 w-[812px] h-[406px] overflow-hidden flex items-center justify-center pointer-events-auto">
+          <div className="relative w-full max-w-[952px] aspect-[3/2] flex flex-col items-center justify-center -translate-y-[10%] sm:-translate-y-[15%] md:-translate-y-[20%] mx-auto px-4">
+            <div className="absolute bottom-0 z-0 w-[90%] max-w-[812px] aspect-[2/1] overflow-hidden flex items-center justify-center pointer-events-auto">
               <div className="absolute w-full h-full bg-[#FEB273] rounded-t-full" />
             </div>
 
@@ -50,7 +50,7 @@ export default function Home() {
                 alt="Frame Decoration"
                 width={1017}
                 height={688}
-                className="object-contain"
+                className="object-contain w-full h-auto"
                 priority
               />
             </div>
@@ -60,17 +60,17 @@ export default function Home() {
               alt="Jenny"
               width={952}
               height={636}
-              className="relative z-20"
+              className="relative z-20 w-full h-auto object-contain mt-5"
               priority
             />
 
-            <div className="absolute bottom-[10%] z-30">
+            <div className="absolute bottom-[10%] z-30 w-full flex justify-center">
               <DualToggleButtons />
             </div>
           </div>
         </div>
 
-        <div className="w-[169px] h-[125px] flex flex-col items-end justify-end gap-2 transition-transform duration-300 ease-in-out group-hover:-translate-y-[250px]">
+        <div className="hidden lg:flex w-[169px] h-[125px] flex-col items-end justify-end gap-2 transition-transform duration-300 ease-in-out group-hover:-translate-y-[250px]">
           <div className="flex gap-1">
             {[...Array(5)].map((_, i) => (
               <Star key={i} size={32} fill="#FD853A" stroke="#FD853A" />
@@ -84,7 +84,7 @@ export default function Home() {
       </div>
 
       {/* Services */}
-      <div className="relative flex flex-col w-full min-h-[878px] gap-16 sm:gap-[96px] items-center px-4 sm:px-6 lg:px-[71px] py-16 sm:py-[116px] bg-[#171717] rounded-[30px] sm:rounded-[50px] overflow-hidden -mt-14">
+      <div className="relative flex flex-col w-full min-h-[878px] gap-16 sm:gap-[96px] items-center px-4 sm:px-6 lg:px-[71px] py-16 sm:py-[116px] bg-[#171717] rounded-[30px] sm:rounded-[50px] overflow-hidden -translate-y-8 sm:-translate-y-0 md:-translate-y-15 lg:translate-y-0 -mt-14">
         <Image
           src="/Frame 77.svg"
           alt="image"
@@ -255,7 +255,7 @@ export default function Home() {
               />
             </div>
           </div>
-          
+
           <div className="shrink-0">
             <OrangeButton title="See All" />
           </div>
