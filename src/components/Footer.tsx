@@ -37,10 +37,10 @@ const Footer = () => {
                 </button>
             </div>
 
-            <div className="border border-[#475467] w-full"></div>
+            <div className="border border-[#475467] w-full mt-6 md:mt-0"></div>
 
             {/* Navigation Links */}
-            <div className="flex flex-col lg:flex-row justify-between w-full max-w-[1298px] h-auto lg:h-[239px] gap-8 lg:gap-0">
+            <div className="flex flex-col lg:flex-row justify-between w-full max-w-[1298px] h-auto lg:h-[239px] gap-8 lg:gap-0 mt-8 md:mt-0">
 
                 <div className="w-full lg:w-[635px] h-full flex flex-col items-start justify-start gap-6 lg:gap-10">
                     <div className="flex gap-3 sm:gap-4 items-center flex-shrink-0 cursor-pointer">
@@ -114,7 +114,7 @@ const Footer = () => {
 
             <div className="border border-[#475467] w-full mt-8 lg:mt-16"></div>
 
-            <div className="flex flex-col sm:flex-row w-full max-w-[1298px] h-auto lg:h-[26px] items-start justify-between gap-4 sm:gap-0">
+            <div className="flex flex-col sm:flex-row w-full max-w-[1298px] h-auto lg:h-[26px] items-start justify-between gap-4 sm:gap-0 mt-6 md:mt-0">
                 <p className="w-full sm:w-[415px] h-auto lg:h-[26px] text-[16px] sm:text-[18px] lg:text-[20px] text-white text-center sm:text-left">Copyright© 2023 Jayesh. All Rights Reserved.</p>
                 <Link href={"#"} className="w-full sm:w-fit h-auto lg:h-[26px] text-[16px] sm:text-[18px] lg:text-[20px] text-white text-center sm:text-right hover:text-[#FD853A] transition-colors">Privacy Policy</Link>
             </div>
