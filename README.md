@@ -1,36 +1,233 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Portfolio - Product Designer
 
-## Getting Started
+A modern, responsive portfolio website built with Next.js 15, TypeScript, and Tailwind CSS. This project showcases Jenny's work as a Product Designer with a beautiful, interactive interface.
 
-First, run the development server:
+## 🚀 Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+- **Responsive Design**: Fully responsive across all devices (mobile, tablet, desktop)
+- **Modern UI/UX**: Clean, professional design with smooth animations and transitions
+- **Interactive Components**: Hover effects, sliders, and dynamic content
+- **Performance Optimized**: Built with Next.js 15 and optimized for speed
+- **TypeScript**: Full type safety throughout the application
+- **Tailwind CSS**: Utility-first CSS framework for consistent styling
+
+## 🛠️ Tech Stack
+
+- **Framework**: Next.js 15.3.3
+- **Language**: TypeScript 5
+- **Styling**: Tailwind CSS 4
+- **Icons**: Lucide React
+- **Sliders**: Swiper.js
+- **Fonts**: Geist Sans & Geist Mono
+
+## 📁 Project Structure
+
+```
+my-project/
+├── public/                 # Static assets
+│   ├── *.svg              # SVG images and icons
+│   └── favicon.ico        # Site favicon
+├── src/
+│   ├── app/               # Next.js app directory
+│   │   ├── globals.css    # Global styles
+│   │   ├── layout.tsx     # Root layout component
+│   │   └── page.tsx       # Home page component
+│   ├── components/        # Reusable components
+│   │   ├── Navbar.tsx     # Navigation component
+│   │   ├── Footer.tsx     # Footer component
+│   │   └── ui/            # UI components
+│   │       ├── ArrowButton.tsx
+│   │       ├── Blog.tsx
+│   │       ├── CustomeText.tsx
+│   │       ├── DualButtons.tsx
+│   │       ├── GenericSlider.tsx
+│   │       ├── OrangeButton.tsx
+│   │       ├── PortfolioCard.tsx
+│   │       ├── ReviewCard.tsx
+│   │       └── ServicesCard.tsx
+│   └── data/              # Data and types
+│       └── data.ts        # Mock data and interfaces
+├── package.json           # Dependencies and scripts
+├── tsconfig.json          # TypeScript configuration
+├── next.config.ts         # Next.js configuration
+├── tailwind.config.js     # Tailwind CSS configuration
+└── README.md              # Project documentation
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🎨 Components Overview
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Core Components
+- **Navbar**: Responsive navigation with mobile menu
+- **Footer**: Contact information and social links
+- **CustomeText**: Reusable text component with animations
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### UI Components
+- **GenericSlider**: Versatile slider component supporting multiple card types
+- **ServicesCard**: Service showcase cards with hover effects
+- **PortfolioCard**: Portfolio project display cards
+- **ReviewCard**: Customer testimonial cards with star ratings
+- **Blog**: Blog post preview cards
+- **ArrowButton**: Animated arrow button component
+- **OrangeButton**: Styled orange button component
+- **DualButtons**: Toggle button component
 
-## Learn More
+## 📊 Data Structure
 
-To learn more about Next.js, take a look at the following resources:
+The application uses TypeScript interfaces for type safety:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```typescript
+interface Experience {
+  company: string;
+  duration: string;
+  role: string;
+  desc: string;
+  dotColor: string;
+}
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+interface PortfolioItem {
+  image: string;
+  title: string;
+  href: string;
+  desc: string;
+}
 
-## Deploy on Vercel
+interface Review {
+  name: string;
+  role: string;
+  rating: number;
+  text: string;
+}
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+interface Blog {
+  image: string;
+  button: string;
+  name: string;
+  date: string;
+  title: string;
+}
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 🚀 Getting Started
+
+### Prerequisites
+- Node.js 18+ 
+- npm or yarn
+
+### Installation
+
+1. **Clone the repository**
+   ```bash
+   git clone <repository-url>
+   cd my-project
+   ```
+
+2. **Install dependencies**
+   ```bash
+   npm install
+   # or
+   yarn install
+   ```
+
+3. **Run the development server**
+   ```bash
+   npm run dev
+   # or
+   yarn dev
+   ```
+
+4. **Open your browser**
+   Navigate to [http://localhost:3000](http://localhost:3000)
+
+### Available Scripts
+
+- `npm run dev` - Start development server with Turbopack
+- `npm run build` - Build for production
+- `npm run start` - Start production server
+- `npm run lint` - Run ESLint
+
+## 🎯 Key Features
+
+### Hero Section
+- Animated text with custom typography
+- Interactive hover effects
+- Professional image display
+
+### Services Section
+- Slider showcasing different services
+- Hover animations and transitions
+- Professional service cards
+
+### Work Experience
+- Timeline-style experience display
+- Responsive layout for mobile and desktop
+- Interactive dot indicators
+
+### Portfolio
+- Project showcase with filtering
+- Image galleries and descriptions
+- Call-to-action buttons
+
+### Testimonials
+- Customer review cards with star ratings
+- Slider functionality
+- Professional testimonial layout
+
+### Contact Section
+- Email subscription form
+- Social media integration
+- Professional contact information
+
+## 🎨 Design System
+
+### Color Palette
+- **Primary Orange**: #FD853A
+- **Dark Gray**: #171717
+- **Light Gray**: #F2F4F7
+- **Text Colors**: #344054, #1D2939, #98A2B3
+- **White**: #FCFCFD, #F9FAFB
+
+### Typography
+- **Font Family**: Geist Sans (primary), Geist Mono (monospace)
+- **Responsive Text Sizes**: 4xl to 7xl for headings, base to xl for body text
+
+### Spacing
+- Consistent spacing using Tailwind's spacing scale
+- Responsive padding and margins
+- Proper component spacing
+
+## 📱 Responsive Design
+
+The website is fully responsive with breakpoints:
+- **Mobile**: < 640px
+- **Tablet**: 640px - 1024px
+- **Desktop**: > 1024px
+
+## 🔧 Customization
+
+### Adding New Content
+1. Update data in `src/data/data.ts`
+2. Add new SVG images to `public/` directory
+3. Modify components as needed
+
+### Styling Changes
+- Use Tailwind CSS classes for styling
+- Modify `globals.css` for custom styles
+- Update component-specific styles
+
+### Adding New Sections
+1. Create new components in `src/components/ui/`
+2. Add data interfaces in `src/data/data.ts`
+3. Import and use in `src/app/page.tsx`
+
+## 🚀 Deployment
+
+### Vercel (Recommended)
+1. Push code to GitHub
+2. Connect repository to Vercel
+3. Deploy automatically
+
+### Other Platforms
+1. Run `npm run build`
+2. Deploy the `out` directory to your hosting platform
+
+
