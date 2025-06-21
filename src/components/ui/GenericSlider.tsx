@@ -52,25 +52,36 @@ export function GenericSlider<T extends AllowedCard>({
           breakpoints={{
             0: {
               slidesPerView: isPortfolio ? 1 : 1,
+              spaceBetween: 16,
+            },
+            640: {
+              slidesPerView: isPortfolio || isBlog || isReview ? 1 : 2,
+              spaceBetween: 18,
             },
             850: {
               slidesPerView: isPortfolio || isBlog || isReview ? 1 : 2,
+              spaceBetween: 20,
             },
             1024: {
+              slidesPerView: isPortfolio ? 2 : Math.min(slidesPerView, 3),
+              spaceBetween: 24,
+            },
+            1280: {
               slidesPerView: isPortfolio ? 2 : slidesPerView,
+              spaceBetween: 24,
             },
           }}
-          className="!pb-10"
+          className="!pb-16"
         >
           {data.map((item, index) => (
             <SwiperSlide
               key={index}
-              className={`${isReview ? '!w-[90%] md:!w-[784px]' : '!flex justify-center'}`}
+              className={`${isReview ? '!w-full sm:!w-[90%] md:!w-[784px]' : '!flex justify-center'}`}
             >
               {cardType === 'hover' && 'title' in item && 'imageSrc' in item && (
                 <ServicesCard title={item.title} imageSrc={item.imageSrc} />
               )}
-              {cardType === 'portfolio' && 'image' in item && (
+              {cardType === 'portfolio' && 'image' in item && 'href' in item && 'desc' in item && (
                 <PortfolioCard
                   image={item.image}
                   title={item.title}
@@ -86,7 +97,7 @@ export function GenericSlider<T extends AllowedCard>({
                   text={item.text}
                 />
               )}
-              {cardType === 'blog' && 'image' in item && 'button' in item && (
+              {cardType === 'blog' && 'image' in item && 'button' in item && 'name' in item && 'date' in item && (
                 <Blog
                   image={item.image}
                   button={item.button}
