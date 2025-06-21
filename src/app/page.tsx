@@ -391,7 +391,7 @@ export default function Home() {
 
       {/* Skills Slider */}
       <div className="relative w-full h-[147px] bg-[#FB6514] rounded-tl-4xl rounded-br-4xl overflow-hidden">
-        <div className="absolute w-[5000px] h-[63px] bg-white -rotate-[1.9deg] z-10 -ml-2 flex items-center">
+        <div className="absolute w-[5000px] h-[63px] bg-white -rotate-2 -mt-2 md:mt-0 md:-rotate-[1.9deg] z-10 -ml-2 flex items-center">
           <div className="marquee flex gap-8 w-max">
             {[...skills, ...skills].map((skill, index) => (
               <div
@@ -419,8 +419,8 @@ export default function Home() {
 
       {/* Blog */}
       <div className="flex flex-col w-fll h-fit items-center gap-12 px-[71px] py-[97px]">
-        <div className="w-[1298px] h-[126px] flex flex-col md:flex-row items-center justify-between">
-          <h1 className="text-[#344054] w-fit md:w-[215px] h-full font-bold text-[48px]">From my blog post</h1>
+        <div className="w-[1298px] h-[126px] flex flex-col md:flex-row items-center justify-between gap-6 mb-6 md:mb-0">
+          <h1 className="text-[#344054] w-fit md:min-w-[215px] h-full font-bold text-[48px]">From my blog post</h1>
           <OrangeButton title="See All" className="w-[400px] md:w-fit" />
         </div>
         <GenericSlider
