@@ -7,6 +7,7 @@ import OrangeButton from "@/components/ui/OrangeButton";
 import ArrowButton from "@/components/ui/ArrowButton";
 import { experiences, buttons, iconAndText, skills, blogs, portfolioData, cardData, reviews } from '../data/data';
 import { GenericSlider } from "@/components/ui/GenericSlider";
+import ClientOnly from "@/components/ui/ClientOnly";
 
 export default function Home() {
   return (
@@ -26,9 +27,11 @@ export default function Home() {
 
         <div className="relative w-full flex flex-col items-center justify-center">
           <div className="flex w-full max-w-[952px] flex-col items-center justify-center  transition-all duration-300 ease-in-out group-hover:translate-y-[280px] group-hover:opacity-0 px-4 sm:px-6">
-            <button className="h-[45px] px-[26px] py-[13px] translate-y-0 md:translate-y-10 rounded-full border border-[#171717] flex items-center justify-center bg-white mt-10">
-              Hello!
-            </button>
+            <ClientOnly>
+              <button className="h-[45px] px-[26px] py-[13px] translate-y-0 md:translate-y-10 rounded-full border border-[#171717] flex items-center justify-center bg-white mt-10">
+                Hello!
+              </button>
+            </ClientOnly>
             <div className="flex flex-col sm:flex-row sm:gap-2 items-center sm:items-end mb-1 mt-6 sm:mt-8">
               <CustomeText title="I&apos;m" className="text-[#171717] font-semibold text-4xl sm:text-5xl md:text-7xl xl:text-[96px]" />
               <div className="flex items-end">
@@ -230,9 +233,11 @@ export default function Home() {
             </div>
           </div>
 
-          <button className="w-full cursor-pointer sm:w-auto px-6 py-4 rounded-[20px] border border-[#151515] text-[#151515] font-semibold text-2xl sm:text-[28px] transition-all duration-300 hover:bg-[#151515] hover:text-white">
-            Hire me
-          </button>
+          <ClientOnly>
+            <button className="w-full cursor-pointer sm:w-auto px-6 py-4 rounded-[20px] border border-[#151515] text-[#151515] font-semibold text-2xl sm:text-[28px] transition-all duration-300 hover:bg-[#151515] hover:text-white">
+              Hire me
+            </button>
+          </ClientOnly>
         </div>
       </div>
 
@@ -270,14 +275,16 @@ export default function Home() {
           />
 
           <div className="w-full max-w-[947px] flex flex-wrap justify-center gap-4 sm:gap-[14px] items-center">
-            {buttons.map((text, index) => (
-              <button
-                key={index}
-                className="px-6 sm:px-8 py-3 rounded-[24px] bg-[#F2F4F7] text-[#000000] text-[16px] sm:text-[18px] lg:text-[20px] hover:bg-[#FD853A] hover:text-white transition-colors duration-300"
-              >
-                {text}
-              </button>
-            ))}
+            <ClientOnly>
+              {buttons.map((text, index) => (
+                <button
+                  key={index}
+                  className="px-6 sm:px-8 py-3 rounded-[24px] bg-[#F2F4F7] text-[#000000] text-[16px] sm:text-[18px] lg:text-[20px] hover:bg-[#FD853A] hover:text-white transition-colors duration-300"
+                >
+                  {text}
+                </button>
+              ))}
+            </ClientOnly>
           </div>
 
           <div className="flex flex-col w-full max-w-[742px] items-start gap-6 px-4 sm:px-0">
@@ -298,12 +305,12 @@ export default function Home() {
       </div>
 
       {/* Testimonials */}
-      <div className="relative flex flex-col w-full items-center px-4 sm:px-6 lg:px-[71px] py-12 sm:py-[96px] lg:py-[116px] gap-12 sm:gap-[96px] bg-[#171717] rounded-[30px] sm:rounded-[40px] lg:rounded-[50px] overflow-hidden">
+      <div className="relative flex flex-col w-full min-h-[900px] items-center px-4 sm:px-6 lg:px-[71px] py-12 sm:py-[96px]  gap-12 bg-[#171717] rounded-[30px] sm:rounded-[40px] lg:rounded-[50px] overflow-hidden">
         <Image
           src="/Frame 77.svg"
           alt="image"
           fill
-          className="object-cover absolute opacity-20"
+          className="object-cover absolute opacity-50"
         />
 
         <div className="flex flex-col w-full max-w-[1299px] items-center gap-4 z-10 px-2">
@@ -324,17 +331,20 @@ export default function Home() {
             </div>
           </div>
           <p className="w-full max-w-[742px] text-[16px] sm:text-[18px] lg:text-[20px] text-[#F9FAFB] text-center leading-[1.6] px-2">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed congue interdum ligula a dignissim. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lobortis orci elementum egestas lobortis.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed congue interdum ligula a dignissim.
           </p>
         </div>
 
-        <GenericSlider
-          data={reviews}
-          slidesPerView={3}
-          heightClass=""
-          cardType="review"
-        />
+        <div className="absolute bottom-[20%] left-0 right-0 w-full z-10">
+          <GenericSlider
+            data={reviews}
+            slidesPerView={3}
+            heightClass=""
+            cardType="review"
+          />
+        </div>
       </div>
+
 
       {/* Contact */}
       <div className="w-full bg-white flex flex-col items-center justify-center py-16 px-4 sm:px-6 lg:px-[71px] gap-10">
@@ -365,15 +375,17 @@ export default function Home() {
             />
           </div>
 
-          <input
-            type="text"
-            placeholder="Enter Email Address"
-            className="w-full md:flex-1 px-4 py-2 rounded-full text-center md:text-left text-base sm:text-lg outline-none bg-transparent text-[#1D2939] placeholder:text-[#667085]"
-          />
+          <ClientOnly>
+            <input
+              type="text"
+              placeholder="Enter Email Address"
+              className="w-full md:flex-1 px-4 py-2 rounded-full text-center md:text-left text-base sm:text-lg outline-none bg-transparent text-[#1D2939] placeholder:text-[#667085]"
+            />
 
-          <button className="w-fit px-6 md:px-12 py-1 md:py-3 rounded-full bg-[#FD853A] hover:bg-[#e4752f] text-white text-lg font-semibold transition duration-300">
-            Send
-          </button>
+            <button className="w-fit px-6 md:px-12 py-1 md:py-3 rounded-full bg-[#FD853A] hover:bg-[#e4752f] text-white text-lg font-semibold transition duration-300">
+              Send
+            </button>
+          </ClientOnly>
         </div>
 
         <div className="flex flex-wrap justify-center items-center gap-4 sm:gap-6 text-sm sm:text-base font-medium text-[#000000]">
@@ -430,6 +442,7 @@ export default function Home() {
           cardType="blog"
         />
       </div>
+
     </div>
   );
 }

@@ -3,7 +3,11 @@ import Link from 'next/link';
 import ArrowButton from './ArrowButton';
 import { PortfolioItem } from '@/data/data';
 
-const PortfolioCard: React.FC<PortfolioItem> = ({ image, title, href, desc }) => {
+interface PortfolioCardProps extends PortfolioItem {
+  priority?: boolean;
+}
+
+const PortfolioCard: React.FC<PortfolioCardProps> = ({ image, title, href, desc, priority = false }) => {
   return (
     <div
       className="relative group 
@@ -33,6 +37,7 @@ const PortfolioCard: React.FC<PortfolioItem> = ({ image, title, href, desc }) =>
         alt={title}
         fill
         className="object-cover z-0"
+        priority={priority}
       />
 
       {/* Content */}

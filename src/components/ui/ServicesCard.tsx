@@ -3,9 +3,10 @@ import Image from 'next/image';
 interface HoverCardProps {
   title: string;
   imageSrc: string;
+  priority?: boolean;
 }
 
-export default function ServicesCard({ title, imageSrc }: HoverCardProps) {
+export default function ServicesCard({ title, imageSrc, priority = false }: HoverCardProps) {
   return (
     <div className="relative flex flex-col items-center justify-end w-full md:max-w-[360px] lg:max-w-[416px] h-[450px] lg:h-[508px] rounded-[37px] lg:rounded-[40px] bg-white/10 backdrop-blur-[15px] border border-white/50 hover:bg-[#FD853A] transition-colors duration-300 ease-in-out overflow-hidden cursor-pointer group">
       
@@ -25,6 +26,7 @@ export default function ServicesCard({ title, imageSrc }: HoverCardProps) {
         width={416}
         height={307}
         className="object-cover z-20 w-full h-[300px] md:max-h-[360px] lg:max-h-[416px] rounded-[35px]"
+        priority={priority}
       />
     </div>
   );

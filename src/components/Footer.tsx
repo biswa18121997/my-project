@@ -3,6 +3,7 @@ import { FacebookIcon, YoutubeIcon, InstagramIcon, TwitterIcon, MessageCircle } 
 import { ArrowUpRight } from "lucide-react";
 import CustomeText from "./ui/CustomeText";
 import Link from "next/link";
+import ClientOnly from "./ui/ClientOnly";
 
 const Footer = () => {
     const navigation = ["Home", "About", "Service", "Resume", "Project", "Contact"];
@@ -28,13 +29,15 @@ const Footer = () => {
                 <h1 className="font-semibold leading-tight text-[32px] sm:text-[40px] lg:text-[48px] xl:text-[64px] text-[#FCFCFD] text-center lg:text-left">
                     Let&apos;s Connect There
                 </h1>
-                <button className="group flex items-center justify-center gap-2 w-full sm:w-[180px] lg:w-[202px] h-[50px] sm:h-[56px] lg:h-[62px] px-4 sm:px-5 py-2 sm:py-2.5 text-white text-base sm:text-lg font-semibold rounded-full bg-[#FD853A] cursor-pointer hover:bg-[#e46e24] transition-colors">
-                    Hire Me
-                    <ArrowUpRight
-                        size={24}
-                        className="sm:w-7 sm:h-7 lg:w-8 lg:h-8 transition-transform duration-300 group-hover:rotate-45"
-                    />
-                </button>
+                <ClientOnly>
+                    <button className="group flex items-center justify-center gap-2 w-full sm:w-[180px] lg:w-[202px] h-[50px] sm:h-[56px] lg:h-[62px] px-4 sm:px-5 py-2 sm:py-2.5 text-white text-base sm:text-lg font-semibold rounded-full bg-[#FD853A] cursor-pointer hover:bg-[#e46e24] transition-colors">
+                        Hire Me
+                        <ArrowUpRight
+                            size={24}
+                            className="sm:w-7 sm:h-7 lg:w-8 lg:h-8 transition-transform duration-300 group-hover:rotate-45"
+                        />
+                    </button>
+                </ClientOnly>
             </div>
 
             <div className="border border-[#475467] w-full mt-6 md:mt-0"></div>
@@ -98,16 +101,18 @@ const Footer = () => {
                         className="text-[18px] sm:text-[19px] lg:text-[20px] font-semibold text-[#FD853A]"
                     />
                     <div className="relative w-full h-[45px] sm:h-[48px] lg:h-[51px]">
-                        <input
-                            type="text"
-                            placeholder="Email Address"
-                            className="w-full h-full bg-white text-black text-[14px] sm:text-[15px] lg:text-[16px] px-3 sm:px-4 py-2 sm:py-3 pr-12 rounded-[8px] sm:rounded-[10px] border-none outline-none"
-                        />
-                        <button className="absolute top-0 right-0 h-full w-[45px] sm:w-[48px] lg:w-[51px] bg-[#FD853A] rounded-r-[8px] sm:rounded-r-[10px] flex items-center justify-center cursor-pointer hover:bg-[#e46e24] transition-colors">
-                            <svg width="20" height="21" className="sm:w-6 sm:h-6 lg:w-6 lg:h-6" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M6.29602 3.48708C3.91012 2.38589 1.36183 4.66673 2.19279 7.15964L3.45424 10.9007C3.59136 11.3074 3.97267 11.5812 4.40182 11.5812H13C13.5523 11.5812 14 12.0289 14 12.5812C14 13.1335 13.5523 13.5812 13 13.5812H4.40182C3.97267 13.5812 3.59136 13.855 3.45424 14.2617L2.19281 18.0028C1.36183 20.4957 3.91012 22.7765 6.29603 21.6754L20.0983 15.3051C22.422 14.2326 22.422 10.9299 20.0983 9.85737L6.29602 3.48708Z" fill="#FCFCFD" />
-                            </svg>
-                        </button>
+                        <ClientOnly>
+                            <input
+                                type="text"
+                                placeholder="Email Address"
+                                className="w-full h-full bg-white text-black text-[14px] sm:text-[15px] lg:text-[16px] px-3 sm:px-4 py-2 sm:py-3 pr-12 rounded-[8px] sm:rounded-[10px] border-none outline-none"
+                            />
+                            <button className="absolute top-0 right-0 h-full w-[45px] sm:w-[48px] lg:w-[51px] bg-[#FD853A] rounded-r-[8px] sm:rounded-r-[10px] flex items-center justify-center cursor-pointer hover:bg-[#e46e24] transition-colors">
+                                <svg width="20" height="21" className="sm:w-6 sm:h-6 lg:w-6 lg:h-6" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M6.29602 3.48708C3.91012 2.38589 1.36183 4.66673 2.19279 7.15964L3.45424 10.9007C3.59136 11.3074 3.97267 11.5812 4.40182 11.5812H13C13.5523 11.5812 14 12.0289 14 12.5812C14 13.1335 13.5523 13.5812 13 13.5812H4.40182C3.97267 13.5812 3.59136 13.855 3.45424 14.2617L2.19281 18.0028C1.36183 20.4957 3.91012 22.7765 6.29603 21.6754L20.0983 15.3051C22.422 14.2326 22.422 10.9299 20.0983 9.85737L6.29602 3.48708Z" fill="#FCFCFD" />
+                                </svg>
+                            </button>
+                        </ClientOnly>
                     </div>
                 </div>
             </div>
