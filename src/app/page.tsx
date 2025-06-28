@@ -19,7 +19,7 @@ export default function Home() {
         <div className="hidden lg:flex flex-col w-[328px] h-[138px] items-start justify-start transition-transform duration-300 ease-in-out group-hover:-translate-y-[250px]">
           <div className="text-[#344054] text-[36px] leading-none">&quot;</div>
           <p className="text-[#344054] text-[16px] font-medium leading-snug">
-            Jenny&apos;s exceptional product design ensured our website&apos;s success.
+            Abhiruchi&apos;s exceptional product design ensured our website&apos;s success.
             <br />
             Highly recommended.
           </p>
@@ -33,13 +33,13 @@ export default function Home() {
               </button>
             </ClientOnly>
             <div className="flex flex-col sm:flex-row sm:gap-2 items-center sm:items-end mb-1 mt-6 sm:mt-8">
-              <CustomeText title="I&apos;m" className="text-[#171717] font-semibold text-4xl sm:text-5xl md:text-7xl xl:text-[96px]" />
+              <CustomeText title="I&apos;m" className="text-[#171717] font-semibold text-4xl sm:text-5xl md:text-7xl xl:text-[88px]" />
               <div className="flex items-end">
-                <CustomeText title="Jenny" className="text-[#FD853A] font-semibold text-4xl sm:text-5xl md:text-7xl xl:text-[96px]" />
-                <CustomeText title="," className="text-[#171717] font-semibold text-4xl sm:text-5xl md:text-7xl xl:text-[96px]" />
+                <CustomeText title="Abhiruchi" className="text-[#FD853A] font-semibold text-4xl sm:text-5xl md:text-7xl xl:text-[88px]" />
+                <CustomeText title="," className="text-[#171717] font-semibold text-4xl sm:text-5xl md:text-7xl xl:text-[88px]" />
               </div>
             </div>
-            <CustomeText title="Product Designer" className="text-[#171717] font-semibold text-4xl sm:text-5xl md:text-7xl xl:text-[96px] text-center" />
+            <CustomeText title="Professional Designer" className="text-[#171717] font-semibold text-4xl sm:text-5xl md:text-7xl xl:text-[88px] text-center" />
           </div>
 
           <div className="relative w-full max-w-[952px] aspect-[3/2] flex flex-col items-center justify-center -translate-y-[10%] sm:-translate-y-[15%] md:-translate-y-[20%] mx-auto px-4">
@@ -60,7 +60,7 @@ export default function Home() {
 
             <Image
               src="/girl.svg"
-              alt="Jenny"
+              alt="abhiruchi"
               width={952}
               height={636}
               className="relative z-20 w-full h-auto object-contain mt-5"
