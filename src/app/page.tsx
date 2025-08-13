@@ -5,7 +5,7 @@ import Image from "next/image";
 import { Star } from "lucide-react";
 import OrangeButton from "@/components/ui/OrangeButton";
 import ArrowButton from "@/components/ui/ArrowButton";
-import { experiences, buttons, iconAndText, skills, blogs, portfolioData, cardData, reviews } from '../data/data';
+import { experiences, skills, blogs, portfolioData, } from '../data/data';
 import { GenericSlider } from "@/components/ui/GenericSlider";
 import ClientOnly from "@/components/ui/ClientOnly";
 
@@ -19,7 +19,8 @@ export default function Home() {
         <div className="hidden lg:flex flex-col w-[328px] h-[138px] items-start justify-start transition-transform duration-300 ease-in-out group-hover:-translate-y-[250px]">
           <div className="text-[#344054] text-[36px] leading-none">&quot;</div>
           <p className="text-[#344054] text-[16px] font-medium leading-snug">
-            Abhiruchi&apos;s exceptional product design ensured our website&apos;s success.
+            Akrati Malviya&apos;s Digital Marketing Specialist | Performance Marketer | SEO & CRM Expert
+            &apos;s success.
             <br />
             Highly recommended.
           </p>
@@ -35,11 +36,11 @@ export default function Home() {
             <div className="flex flex-col sm:flex-row sm:gap-2 items-center sm:items-end mb-1 mt-6 sm:mt-8">
               <CustomeText title="I&apos;m" className="text-[#171717] font-semibold text-4xl sm:text-5xl md:text-7xl xl:text-[88px]" />
               <div className="flex items-end">
-                <CustomeText title="Abhiruchi" className="text-[#FD853A] font-semibold text-4xl sm:text-5xl md:text-7xl xl:text-[88px]" />
+                <CustomeText title=" Akrati Malviya" className="text-[#FD853A] font-semibold text-4xl sm:text-5xl md:text-7xl xl:text-[88px]" />
                 <CustomeText title="," className="text-[#171717] font-semibold text-4xl sm:text-5xl md:text-7xl xl:text-[88px]" />
               </div>
             </div>
-            <CustomeText title="Professional Designer" className="text-[#171717] font-semibold text-4xl sm:text-5xl md:text-7xl xl:text-[88px] text-center" />
+            <CustomeText title="Digital Marketing Specialist" className="text-[#171717] font-semibold text-4xl sm:text-5xl md:text-7xl xl:text-[88px] text-center" />
           </div>
 
           <div className="relative w-full max-w-[952px] aspect-[3/2] flex flex-col items-center justify-center -translate-y-[10%] sm:-translate-y-[15%] md:-translate-y-[20%] mx-auto px-4">
@@ -60,7 +61,7 @@ export default function Home() {
 
             <Image
               src="/girl.svg"
-              alt="abhiruchi"
+              alt="Akrati Malviya"
               width={952}
               height={636}
               className="relative z-20 w-full h-auto object-contain mt-5"
@@ -74,20 +75,20 @@ export default function Home() {
         </div>
 
         <div className="hidden lg:flex w-[169px] h-[125px] flex-col items-end justify-end gap-2 transition-transform duration-300 ease-in-out group-hover:-translate-y-[250px]">
-          <div className="flex gap-1">
+          {/* <div className="flex gap-1">
             {[...Array(5)].map((_, i) => (
               <Star key={i} size={32} fill="#FD853A" stroke="#FD853A" />
             ))}
-          </div>
+          </div> */}
           <h1 className="text-[32px] font-bold text-[#171717] leading-none whitespace-nowrap">
-            10 Years
+            3+ years
           </h1>
           <p className="text-sm text-[#171717]">Experience</p>
         </div>
       </div>
 
       {/* Services */}
-      <div className="relative flex flex-col w-full min-h-[878px] gap-16 sm:gap-[96px] items-center px-4 sm:px-6 lg:px-[71px] py-16 sm:py-[116px] bg-[#171717] rounded-[30px] sm:rounded-[50px] overflow-hidden -translate-y-8 sm:-translate-y-0 md:-translate-y-15 lg:translate-y-0 -mt-14">
+      {/* <div className="relative flex flex-col w-full min-h-[878px] gap-16 sm:gap-[96px] items-center px-4 sm:px-6 lg:px-[71px] py-16 sm:py-[116px] bg-[#171717] rounded-[30px] sm:rounded-[50px] overflow-hidden -translate-y-8 sm:-translate-y-0 md:-translate-y-15 lg:translate-y-0 -mt-14">
         <Image
           src="/Frame 77.svg"
           alt="image"
@@ -101,8 +102,10 @@ export default function Home() {
             <CustomeText title="Services" className="font-medium text-3xl sm:text-4xl lg:text-5xl text-[#FD853A]" />
           </div>
           <p className="w-full lg:w-[578px] font-medium text-base sm:text-lg lg:text-[20px] text-white">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis lacus nunc,
-            posuere in justo vulputate, bibendum sodales
+            Marketing Specialist with 3+ years of experience in SEO, SEM, paid media, and CRM automation across SaaS, consumer, and nonprofit sectors.
+            Led Gen Z market research for Ferrero, shaping go-to-market strategy. Improved lead volume by 30% through SEO optimization and paid media
+            restructuring. Holds certifications in Google Analytics, HubSpot Digital Marketing, SEO & Social Media Marketing.
+
           </p>
         </div>
 
@@ -114,11 +117,11 @@ export default function Home() {
             cardType="hover"
           />
         </div>
-      </div>
+      </div> */}
 
       {/* Work Experience */}
-      <div className="w-full min-h-[600px] lg:h-[827px] flex flex-col items-start mx-auto px-4 sm:px-6 lg:px-[71px] py-8 lg:py-16">
-        <div className="w-full h-auto lg:h-[234px] flex lg:flex-row items-start justify-center space-x-2.5 mb-8 lg:mb-16 text-center lg:text-left">
+      <div className="w-full min-h-[400px] lg:h-[800px] flex flex-col items-start mx-auto px-4 sm:px-6 lg:px-[71px] py-8 lg:py-16">
+        <div className="w-full h-auto lg:h-[400px] flex lg:flex-row items-start justify-center space-x-2.5 mb-8 lg:mb-16 text-center lg:text-left">
           <CustomeText title="My" className="font-medium text-4xl sm:text-5xl lg:text-6xl text-[#344054]" />
           <CustomeText title="Work" className="font-medium text-4xl sm:text-5xl lg:text-6xl text-[#FD853A]" />
           <CustomeText title="Experience" className="font-medium text-4xl sm:text-5xl lg:text-6xl text-[#FD853A]" />
@@ -147,7 +150,7 @@ export default function Home() {
         </div>
 
         <div className="w-full h-auto lg:h-[438px] hidden lg:flex justify-evenly">
-          <div className="flex flex-col justify-between w-[495px] h-[438px] gap-[102px]">
+          <div className="flex flex-col justify-between w-[495px]  gap-[102px]">
             {experiences.map((exp, index) => (
               <div key={index} className="flex flex-col gap-[14px]">
                 <CustomeText title={exp.company} className="font-semibold text-[#1D2939] text-[40px]" />
@@ -166,7 +169,7 @@ export default function Home() {
             ))}
           </div>
 
-          <div className="flex flex-col justify-between w-[444px] h-[400px] gap-[48px]">
+          <div className="flex flex-col justify-between w-[444px] gap-[48px]">
             {experiences.map((exp, index) => (
               <div key={index} className="flex flex-col gap-[14px]">
                 <CustomeText title={exp.role} className="font-semibold text-[#1D2939] text-[40px]" />
@@ -207,11 +210,15 @@ export default function Home() {
           </div>
 
           <p className="text-[#98A2B3] text-base sm:text-lg lg:text-xl leading-relaxed max-w-md">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis lacus nunc, posuere in justo vulputate, bibendum sodales.
+            I am a creative and data-driven marketing professional with a proven track record of crafting
+            impactful campaigns across diverse industries. From social media to brand storytelling, I
+            specialize in translating insights into engaging content that drives measurable results. With a
+            passion for continuous learning and innovation, I aim to amplify brand presence and foster
+            deeper customer connections.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-8 w-full">
-            <div className="flex flex-col">
+            {/* <div className="flex flex-col">
               <CustomeText
                 title="450+"
                 className="text-[32px] sm:text-[36px] font-medium text-[#1D2939]"
@@ -220,8 +227,8 @@ export default function Home() {
                 title="Project Completed"
                 className="text-lg text-[#667085]"
               />
-            </div>
-            <div className="flex flex-col">
+            </div> */}
+            {/* <div className="flex flex-col">
               <CustomeText
                 title="450+"
                 className="text-[32px] sm:text-[36px] font-medium text-[#1D2939]"
@@ -230,7 +237,7 @@ export default function Home() {
                 title="Project Completed"
                 className="text-lg text-[#667085]"
               />
-            </div>
+            </div> */}
           </div>
 
           <ClientOnly>
@@ -276,18 +283,18 @@ export default function Home() {
 
           <div className="w-full max-w-[947px] flex flex-wrap justify-center gap-4 sm:gap-[14px] items-center">
             <ClientOnly>
-              {buttons.map((text, index) => (
+              {/* {buttons.map((text, index) => (
                 <button
                   key={index}
                   className="px-6 sm:px-8 py-3 rounded-[24px] bg-[#F2F4F7] text-[#000000] text-[16px] sm:text-[18px] lg:text-[20px] hover:bg-[#FD853A] hover:text-white transition-colors duration-300"
                 >
                   {text}
                 </button>
-              ))}
+              ))} */}
             </ClientOnly>
           </div>
 
-          <div className="flex flex-col w-full max-w-[742px] items-start gap-6 px-4 sm:px-0">
+          {/* <div className="flex flex-col w-full max-w-[742px] items-start gap-6 px-4 sm:px-0">
             <div className="flex flex-col sm:flex-row w-full items-start sm:items-center gap-4 sm:gap-[18px]">
               <CustomeText
                 title="Lirante - Food Delivery Solution"
@@ -298,14 +305,14 @@ export default function Home() {
               </div>
             </div>
             <p className="text-[16px] sm:text-[18px] lg:text-[20px] text-[#344054] text-center sm:text-left">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed congue interdum ligula a dignissim. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lobortis orci elementum egestas lobortis.
+
             </p>
-          </div>
+          </div> */}
         </div>
       </div>
 
       {/* Testimonials */}
-      <div className="relative flex flex-col w-full min-h-[900px] items-center px-4 sm:px-6 lg:px-[71px] py-12 sm:py-[96px]  gap-12 bg-[#171717] rounded-[30px] sm:rounded-[40px] lg:rounded-[50px] overflow-hidden">
+      {/* <div className="relative flex flex-col w-full min-h-[900px] items-center px-4 sm:px-6 lg:px-[71px] py-12 sm:py-[96px]  gap-12 bg-[#171717] rounded-[30px] sm:rounded-[40px] lg:rounded-[50px] overflow-hidden">
         <Image
           src="/Frame 77.svg"
           alt="image"
@@ -333,9 +340,9 @@ export default function Home() {
           <p className="w-full max-w-[742px] text-[16px] sm:text-[18px] lg:text-[20px] text-[#F9FAFB] text-center leading-[1.6] px-2">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed congue interdum ligula a dignissim.
           </p>
-        </div>
+        </div> */}
 
-        <div className="absolute bottom-[20%] left-0 right-0 w-full z-10">
+      {/* <div className="absolute bottom-[20%] left-0 right-0 w-full z-10">
           <GenericSlider
             data={reviews}
             slidesPerView={3}
@@ -343,7 +350,7 @@ export default function Home() {
             cardType="review"
           />
         </div>
-      </div>
+      </div> */}
 
 
       {/* Contact */}
@@ -389,7 +396,7 @@ export default function Home() {
         </div>
 
         <div className="flex flex-wrap justify-center items-center gap-4 sm:gap-6 text-sm sm:text-base font-medium text-[#000000]">
-          {iconAndText.map((data, index) => {
+          {/* {iconAndText.map((data, index) => {
             const Icon = data.icon;
             return (
               <div key={index} className="flex items-center gap-2">
@@ -397,7 +404,7 @@ export default function Home() {
                 {data.name}
               </div>
             );
-          })}
+          })} */}
         </div>
       </div>
 
@@ -432,7 +439,7 @@ export default function Home() {
       {/* Blog */}
       <div className="flex flex-col w-fll h-fit items-center gap-12 px-[71px] py-[97px]">
         <div className="w-[1298px] h-[126px] flex flex-col lg:flex-row items-center justify-between gap-6 mb-6 md:mb-0">
-          <h1 className="text-[#344054] w-fit md:min-w-[215px] h-full font-bold text-4xl md:text-5xl">From my blog post</h1>
+          <h1 className="text-[#344054] w-fit md:min-w-[215px] h-full font-bold text-4xl md:text-5xl">From my Project post</h1>
           <OrangeButton title="See All" className="w-[300px] md:w-fit" />
         </div>
         <GenericSlider
