@@ -1,4 +1,4 @@
-import { Star, Award, ShieldCheck, LucideIcon } from 'lucide-react';
+import { LucideIcon } from 'lucide-react';
 
 export interface Experience {
   company: string;
